@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/tembicicomponents.esm.js"></script>
+    <script nomodule src="/build/tembicicomponents.js"></script>
+  </head>
+  <body>
+    <tembici-timeline></tembici-timeline>
+    <script>
+      const timelineElement = document.querySelector('tembici-timeline');
+      timelineElement.timeline = [
+            {
+              "id": 1,
+              "showNumber": true,
+              "title": "Creá tu cuenta",
+              "description": "<strong>¡Descubrí una nueva forma de moverte con BAEcobici!</strong><br>Descargá la app y creá tu cuenta. También podés registrarte con <a href='https://www.itau.com.ar/paginas/landings/baecobici-por-tembici.aspx' target='_blank' class='color-primary text-decoration-underline'>abre tu cuenta Itaú</a> ó presencialmente en <span class='color-primary text-decoration-underline'>Balboa 220, Chacarita CABA.</span>",
+              "image": "/assets/img/landing/tutorial/tutorial-1.png",
+              "additionalContent": true
+            },
+            {
+              "id": 2,
+              "showNumber": true,
+              "title": "Elegí tu pase",
+              "description": "Elegí el pase que mejor se adapte a tus necesidades. Hay pases gratuitos, mensuales, anuales, de fin de semana y para turistas extranjeros.",
+              "image": "/assets/img/landing/tutorial/tutorial-2.png"
+            },
+            {
+              "id": 3,
+              "showNumber": true,
+              "title": "Desbloqueá una bici",
+              "description": "Generá un código a través de la app, ingresalo en la estación y desbloqueá la bici para empezar a pedalear.",
+              "image": "/assets/img/landing/tutorial/tutorial-3.png"
+            },
+            {
+              "id": 4,
+              "showNumber": true,
+              "title": "Devolvé la bici",
+              "description": "Buscá un lugar disponible en cualquier estación cercana a tu destino. Anclá la bici y esperá la señal sonora y la luz verde para comprobar que la devolviste correctamente.",
+              "image": "/assets/img/landing/tutorial/tutorial-4.png"
+            }
+          ];
+        timelineElement.timelineItemClicked = ($event) => {
+          console.log($event);
+        }
+    </script>
+  </body>
+</html>
